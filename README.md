@@ -1,3 +1,5 @@
+## Warning! Instagram has been updated, then It's broken the bot. As soon, I'll update him.
+
 ### Instagram bot to consult unfollowers
 
 The Instagram bot is a simple project make with Node.js and a library called Puppeteer. The project is object oriented.

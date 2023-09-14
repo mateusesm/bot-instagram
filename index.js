@@ -11,7 +11,7 @@ class BotInstagram {
     #buttonLoginSelect = 'button[type="submit"]'
 
     #numberFollowersClass = 'span._ac2a span'
-    #allPersonsBoxClass = 'span.xlyipyv span'
+    #allPersonsBoxClass = 'div._aano div'
 
     #unfollowersList = []
 
@@ -91,11 +91,14 @@ class BotInstagram {
         let allPersons = []
 
         await page.waitForSelector(this.#allPersonsBoxClass)
-        allPersons = await page.$$eval(this.#allPersonsBoxClass, (spans) => spans.map((span) => {
-            return span.innerText
+        allPersons = await page.$$eval(this.#allPersonsBoxClass, (divs) => divs.map((div) => {
+            return div
         }))
 
-        while (allPersons.length < numberPersons) {
+        console.log('Here', allPersons)
+        return
+
+        /*while (allPersons.length < numberPersons) {
             await page.evaluate(() => {
                 const dialogPersonsClass = 'div._aano'
                 document.querySelector(dialogPersonsClass).scrollBy(0, 10000)
@@ -107,7 +110,7 @@ class BotInstagram {
             }))
         }
 
-        return allPersons
+        return allPersons*/
     }
 
     async getNumberFollowersAndFollowing(page) {
