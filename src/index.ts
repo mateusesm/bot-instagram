@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { createPuppeteer } from './utils/create-puppeteer';
-import { InstagramBot } from './instagram-bot';
+import { InstagramBot } from './classes/instagram-bot';
 
 (async function runBot() {
   const user = String(process.env.USER_INSTA);
