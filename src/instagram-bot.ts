@@ -34,7 +34,7 @@ export class InstagramBot {
 
       this.user = user;
     } catch (error) {
-      console.log('ERRO AO ENTRAR NO INSTAGRAM. ERRO: ', error);
+      console.log('ERRO AO ENTRAR NO INSTAGRAM');
     }
   }
 
