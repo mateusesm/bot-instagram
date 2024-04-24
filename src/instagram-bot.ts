@@ -17,8 +17,6 @@ export class InstagramBot {
   ) {}
 
   async login(user: string, password: string): Promise<void> {
-    console.log('Iniciando o Bot... Aguarde!');
-    console.log('Pronto para começar!');
     console.log('Entrando no Instagram...');
 
     try {
@@ -34,7 +32,7 @@ export class InstagramBot {
 
       this.user = user;
     } catch (error) {
-      console.log('ERRO AO ENTRAR NO INSTAGRAM');
+      console.log('ERRO AO ENTRAR NO INSTAGRAM.');
     }
   }
 
